@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Immagine di Test - Clicca qui!</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+        #image-container {
+            cursor: pointer;
+            border: 2px solid #ddd;
+            padding: 10px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        #image-container img {
+            max-width: 150px; /* Rendi l'immagine piccola come quella che hai visto */
+            height: auto;
+            display: block;
+            margin-bottom: 10px;
+            border-radius: 4px;
+        }
+        p {
+            color: #555;
+            font-size: 1.1em;
+            margin-top: 20px;
+        }
+        .warning {
+            color: red;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="image-container">
+        <img src="https://via.placeholder.com/150x100?text=Clicca+Qui!" alt="Immagine di esempio cliccabile" id="clickableImage">
+        <p>Ciao! Clicca sull'immagine per scoprire di più...</p>
+    </div>
+    <p class="warning">QUESTA È SOLO UNA PAGINA DI TEST ETICO.</p>
+
+    <script>
+        document.getElementById('clickableImage').onclick = function() {
+            // Questo è il link di destinazione: ti porterà a Wikipedia
+            var destinationURL = "https://www.wikipedia.org"; 
+
+            window.location.href = destinationURL; // Questo reindirizza il browser
+
+            // Messaggio opzionale per vedere cosa succede (apparirà un piccolo popup)
+            setTimeout(function() {
+                alert("Reindirizzamento completato! Sei stato portato a: " + destinationURL);
+            }, 500); 
+        };
+    </script>
+</body>
+</html>
